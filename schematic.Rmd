@@ -2,9 +2,28 @@
 title: "회로도"
 description: |
   자재를 연결하는 회로 설계도
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+```
+
+# 포스터
+
+![](fig/poster.jpg)
+
+# 프로그램
+
+```{r program, eval = FALSE}
+library(tidyverse)
+library(slickR)
+
+program_image <- fs::dir_ls("fig/nolman/")
+
+program_tbl <- tibble(filename = program_image)
+
+slickR::slickR(obj = program_tbl$filename)
 ```
 

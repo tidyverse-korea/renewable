@@ -1,10 +1,27 @@
 ---
-title: "About this site"
+title: "에너지 캠프"
 description: |
-  Some additional details about the website
+  한국과학창의재단 후원으로 전국에서 메이커 분들이 모여 2박3일간 탄소중립 신재생에너지 메이커 활동을 태백에서 실천했습니다. 
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
+```
+
+# 포스터
+
+![](fig/poster.jpg)
+
+# 프로그램
+
+```{r program, eval = TRUE}
+library(tidyverse)
+library(slickR)
+
+program_image <- fs::dir_ls("fig/nolman/")
+
+program_tbl <- tibble(filename = program_image)
+
+slickR::slickR(obj = program_tbl$filename)
 ```
 
