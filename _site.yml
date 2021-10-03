@@ -13,6 +13,8 @@ navbar:
       href: architecture.html
     - text: "BOM"
       href: BOM.html
+    - text: "회로도"
+      href: schematic.html
     - text: "making"
       href: making.html
     - text: "product"

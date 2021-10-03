@@ -6,7 +6,7 @@
       "description": "Some additional details about the website",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-10-03T12:51:47+09:00"
+      "last_modified": "2021-10-03T13:37:47+09:00"
     },
     {
       "path": "architecture.html",
@@ -14,15 +14,15 @@
       "description": "태양광 신재생 에너지 교육 키트 `가빈` 제작 아키텍처 ",
       "author": [],
       "contents": "\n\n\n\n\n\n",
-      "last_modified": "2021-10-03T12:51:47+09:00"
+      "last_modified": "2021-10-03T13:37:48+09:00"
     },
     {
       "path": "BOM.html",
-      "title": "About this site",
-      "description": "Some additional details about the website",
+      "title": "자재목록(BOM)",
+      "description": "제품 개발에 사용된 자재 명세서(BOM)",
       "author": [],
-      "contents": "\n\n가빈\n컴퓨터 (AI 제어): 아두이노 혹은 라즈베리파이\n태양광 패널 (에너지 발생):\n디스플레이 (화면):\n배터리 (에너지 저장):\n팬 (에너지 사용):\n와이어링 (연결선):\n\n\n\n\n",
-      "last_modified": "2021-10-03T12:51:48+09:00"
+      "contents": "\n\n가빈\n컴퓨터 (AI 제어): 아두이노 혹은 라즈베리파이\n태양광 패널 (에너지 발생):\n디스플레이 (화면):\n배터리 (에너지 저장):\n팬 (에너지 사용):\n와이어링 (연결선):\n\n주요 부품 | 설명\n\n\n솔라 패널 - 태양전지판\n50 mA\n5V\n\n\n아두이노 우노\nMCU: ATmega328P\n동작전압: 보드 동작(5 V), 내부(3.3 V)\n메모리; Flash(32KB), SRAM(2KB), EEPROM(1KB)\n\n\n품명: TW102050\n정격: 1,000 mAh, 3.7 V, 3.7 W/h\n\n\n팬\nDC-5V\n\n\n디스플레이\n4-Bit LED Digital Tube Module\n\n\n\n컨트롤러\nKCD11\n250V, 3A\n\n\n\n\n",
+      "last_modified": "2021-10-03T13:37:48+09:00"
     },
     {
       "path": "index.html",
@@ -30,7 +30,15 @@
       "description": "탄소중립 신재생 에너지 캠프 **솔라노마드** 팀 메이커들이 모여 함께 `가빈`을 제품명으로 친환경 태양열 AI 교육 제품을 제작하였습니다.\n",
       "author": [],
       "contents": "\n메이커\n김희태\n박현석\n서경준\n이광춘\n\n팀명\n솔라 노마드(Solar Nomad)\n제품명\n가빈 (반갑고 귀한 손님)\n\n\n\n",
-      "last_modified": "2021-10-03T12:51:48+09:00"
+      "last_modified": "2021-10-03T13:37:49+09:00"
+    },
+    {
+      "path": "schematic.html",
+      "title": "회로도",
+      "description": "자재를 연결하는 회로 설계도",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-10-03T13:37:49+09:00"
     }
   ],
   "collections": []
