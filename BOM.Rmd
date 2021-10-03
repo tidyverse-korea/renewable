@@ -1,0 +1,23 @@
+---
+title: "About this site"
+description: |
+  Some additional details about the website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+![](fig/BOM.png)
+
+
+- 가빈
+    - 컴퓨터 (AI 제어): 아두이노 혹은 라즈베리파이
+    - 태양광 패널 (에너지 발생):
+    - 디스플레이 (화면):
+    - 배터리 (에너지 저장):
+    - 팬 (에너지 사용): 
+    - 와이어링 (연결선): 
+    
+    
+    

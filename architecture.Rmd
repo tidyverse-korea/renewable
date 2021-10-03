@@ -1,10 +1,13 @@
 ---
-title: "About this site"
+title: "아키텍처"
 description: |
-  Some additional details about the website
+  태양광 신재생 에너지 교육 키트 `가빈` 제작 아키텍처 
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+![](fig/architecture.png)
+
+![](fig/diagram.png)

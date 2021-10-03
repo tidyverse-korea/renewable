@@ -12,16 +12,17 @@ knitr::opts_chunk$set(echo = FALSE)
 
 # 메이커
 
-- 김희태
-- 박현석
-- 서경준
-- 이광춘
+-   김희태
+-   박현석
+-   서경준
+-   이광춘
+
+![](fig/team.png){width="450"}
 
 # 팀명
 
-솔라 노마드(Solar Nomad) 
+솔라 노마드(Solar Nomad)
 
 # 제품명
 
 **가빈** (반갑고 귀한 손님)
-
