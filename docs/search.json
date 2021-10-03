@@ -1,0 +1,29 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-10-03T11:17:58+09:00"
+    },
+    {
+      "path": "architecture.html",
+      "title": "About this site",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-10-03T11:17:58+09:00"
+    },
+    {
+      "path": "index.html",
+      "title": "솔라노마드",
+      "description": "탄소중립 신재생 에너지 캠프 **솔라노마드** 팀 메이커들이 모여 함께 `가빈`을 제품명으로 친환경 태양열 AI 교육 제품을 제작하였습니다.\n",
+      "author": [],
+      "contents": "\n메이커\n김희태\n박현석\n서경준\n이광춘\n팀명\n솔라 노마드(Solar Nomad)\n제품명\n가빈 (반갑고 귀한 손님)\n\n\n\n",
+      "last_modified": "2021-10-03T11:17:59+09:00"
+    }
+  ],
+  "collections": []
+}

@@ -1,0 +1,27 @@
+---
+title: "솔라노마드"
+description: |
+  탄소중립 신재생 에너지 캠프 **솔라노마드** 팀 메이커들이 모여 함께 `가빈`을 제품명으로 친환경 태양열 AI 교육 제품을 제작하였습니다.
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+```
+
+# 메이커
+
+- 김희태
+- 박현석
+- 서경준
+- 이광춘
+
+# 팀명
+
+솔라 노마드(Solar Nomad) 
+
+# 제품명
+
+**가빈** (반갑고 귀한 손님)
+
