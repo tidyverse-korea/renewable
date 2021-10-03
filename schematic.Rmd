@@ -10,20 +10,26 @@ editor_options:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# 포스터
+# 3D 프린터 `stl`
 
-![](fig/poster.jpg)
+3D 프린터 `stl` 파일을 통해 구현될 제품을 살펴보자.
 
-# 프로그램
+## 위쪽 부분
 
-```{r program, eval = FALSE}
-library(tidyverse)
-library(slickR)
+```{r stl-3d, webgl=TRUE}
+library(rgl)
+knitr::knit_hooks$set(webgl = hook_webgl)
 
-program_image <- fs::dir_ls("fig/nolman/")
-
-program_tbl <- tibble(filename = program_image)
-
-slickR::slickR(obj = program_tbl$filename)
+top_stl <- readSTL("data/top.stl", col = "blue")
 ```
+
+- [다운로드](data/top.stl)
+
+## 본체 부분
+
+```{r stl-3d-bottom, webgl=TRUE}
+top_stl <- readSTL("data/main.stl", col = "blue")
+```
+
+- [다운로드](data/main.stl)
 
