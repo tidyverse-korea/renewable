@@ -40,9 +40,15 @@ slickR::slickR(obj = product_tbl$filename)
 
 # 태양열 발전
 
+## 실내 구름낀 야외
 
 <video width="320" height="180" controls>
   <source src="data/production/solar.mp4" type="video/mp4">
 </video>
 
 
+## 실외 살짝 태양나온 야외
+
+<video width="320" height="180" controls>
+  <source src="data/production/solar-outside2.mp4" type="video/mp4">
+</video>
