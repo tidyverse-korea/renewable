@@ -1,7 +1,7 @@
 ---
 title: "솔라노마드"
 description: |
-  탄소중립 신재생 에너지 캠프 **솔라노마드** 팀 메이커들이 모여 함께 `가빈`을 제품명으로 친환경 태양열 AI 교육 제품을 제작하였습니다.
+  한국과학창의재단 후원으로 전국에서 메이커 분들이 모여 2박3일간 탄소중립 신재생에너지 메이커 활동을 태백에서 실천했습니다. 
 site: distill::distill_website
 ---
 
@@ -10,19 +10,19 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
-# 메이커
+# 포스터
 
--   김희태
--   박현석
--   서경준
--   이광춘
+![](fig/poster.jpg)
 
-![](fig/team.png){width="450"}
+# 프로그램
 
-# 팀명
+```{r program, eval = TRUE}
+library(tidyverse)
+library(slickR)
 
-솔라 노마드(Solar Nomad)
+program_image <- fs::dir_ls("fig/nolman/")
 
-# 제품명
+program_tbl <- tibble(filename = program_image)
 
-**가빈** (반갑고 귀한 손님)
+slickR::slickR(obj = program_tbl$filename)
+```

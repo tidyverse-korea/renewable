@@ -86,29 +86,29 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 </style>
 
   <!--radix_placeholder_meta_tags-->
-  <title>Solar Nomad: 자재목록(BOM)</title>
+  <title>Solar Nomad: 메이킹</title>
 
-  <meta property="description" itemprop="description" content="제품 개발에 사용된 자재 명세서(BOM)"/>
+  <meta property="description" itemprop="description" content="설계도를 기반으로 3D 프린터 제작과 코딩을 통해 가빈을 제작해 나간다."/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="Solar Nomad: 자재목록(BOM)"/>
+  <meta property="og:title" content="Solar Nomad: 메이킹"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="제품 개발에 사용된 자재 명세서(BOM)"/>
+  <meta property="og:description" content="설계도를 기반으로 3D 프린터 제작과 코딩을 통해 가빈을 제작해 나간다."/>
   <meta property="og:locale" content="en_US"/>
   <meta property="og:site_name" content="Solar Nomad"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="Solar Nomad: 자재목록(BOM)"/>
-  <meta property="twitter:description" content="제품 개발에 사용된 자재 명세서(BOM)"/>
+  <meta property="twitter:title" content="Solar Nomad: 메이킹"/>
+  <meta property="twitter:description" content="설계도를 기반으로 3D 프린터 제작과 코딩을 통해 가빈을 제작해 나간다."/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description"]}},"value":[{"type":"character","attributes":{},"value":["자재목록(BOM)"]},{"type":"character","attributes":{},"value":["제품 개발에 사용된 자재 명세서(BOM)"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","editor_options"]}},"value":[{"type":"character","attributes":{},"value":["메이킹"]},{"type":"character","attributes":{},"value":["설계도를 기반으로 3D 프린터 제작과 코딩을 통해 가빈을 제작해 나간다.\n"]},{"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["chunk_output_type"]}},"value":[{"type":"character","attributes":{},"value":["console"]}]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2037,6 +2037,8 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
   <!--/radix_placeholder_distill-->
   <script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
+  <link href="site_libs/panelset-0.2.4/panelset.css" rel="stylesheet" />
+  <script src="site_libs/panelset-0.2.4/panelset.js"></script>
   <script src="site_libs/popper-2.6.0/popper.min.js"></script>
   <link href="site_libs/tippy-6.2.7/tippy.css" rel="stylesheet" />
   <link href="site_libs/tippy-6.2.7/tippy-light-border.css" rel="stylesheet" />
@@ -2056,7 +2058,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"자재목록(BOM)","description":"제품 개발에 사용된 자재 명세서(BOM)","authors":[]}
+{"title":"메이킹","description":"설계도를 기반으로 3D 프린터 제작과 코딩을 통해 가빈을 제작해 나간다.","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2083,88 +2085,93 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--/radix_placeholder_site_before_body-->
 
 <div class="d-title">
-<h1>자재목록(BOM)</h1>
+<h1>메이킹</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>제품 개발에 사용된 자재 명세서(BOM)</p></p>
+<p><p>설계도를 기반으로 3D 프린터 제작과 코딩을 통해 가빈을 제작해 나간다.</p></p>
 </div>
 
 
 <div class="d-article">
-<p><img src="fig/BOM.png" /></p>
+<h1 id="기구물-3d-프린터">기구물 3D 프린터</h1>
+<h1 id="태양열-발전">태양열 발전</h1>
+<div class="l-page">
+<div class="panelset">
+<section id="이미지" class="panel-name panel">
+<h2 class="panel-name">::: 이미지 :::</h2>
+<p><img src="fig/production/solar.jpeg" width="437" /></p>
+</section>
+<section id="코드" class="panel-name panel">
+<h2 class="panel-name">::: 코드 :::</h2>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#include &lt;SoftwareSerial.h&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>int solar_input <span class="ot">=</span> A0; <span class="sc">/</span><span class="er">/</span> 태양광 패널 인풋</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>void <span class="fu">setup</span>() {</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">Serial.begin</span>(<span class="dv">9600</span>);</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pinMode</span>(solar_input, INPUT); <span class="sc">/</span><span class="er">/</span> 태양광 전류 인풋</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>void <span class="fu">loop</span>() {</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  int solar_value;</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>  solar_value <span class="ot">=</span> <span class="fu">analogRead</span>(solar_input);</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">delay</span>(<span class="dv">1000</span>);</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">Serial.print</span>(<span class="st">&quot; salor panel = &quot;</span>);</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">Serial.print</span>(solar_value);</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">Serial.print</span>(<span class="st">&quot;</span><span class="sc">\n</span><span class="st">&quot;</span>);</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+</div>
+</section>
+</div>
+</div>
+<h1 id="디지털-디스플레이">디지털 디스플레이</h1>
+<div class="l-page">
+<div class="panelset">
+<section id="이미지-1" class="panel-name panel">
+<h2 class="panel-name">::: 이미지 :::</h2>
+<p><img src="fig/production/display.jpeg" width="437" /></p>
+</section>
+<section id="코드-1" class="panel-name panel">
+<h2 class="panel-name">::: 코드 :::</h2>
 <ul>
-<li><p>가빈</p>
-<ul>
-<li>컴퓨터 (AI 제어): 아두이노 혹은 라즈베리파이</li>
-<li>태양광 패널 (에너지 발생):</li>
-<li>디스플레이 (화면):</li>
-<li>배터리 (에너지 저장):</li>
-<li>팬 (에너지 사용):</li>
-<li>와이어링 (연결선):</li>
-</ul></li>
+<li>참고: <a href="https://forum.arduino.cc/t/4-bits-digital-tube-led-display-module-library/375305">4 Bits Digital Tube LED Display Module library</a></li>
 </ul>
-<table>
-<colgroup>
-<col style="width: 46%" />
-<col style="width: 53%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">주요 부품 | 설명</th>
-<th style="text-align: left;"></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;"><img src="fig/20211003_111313.jpg" width="200" /></td>
-<td style="text-align: left;"><ul>
-<li><p>솔라 패널 - 태양전지판</p></li>
-<li><p>50 mA</p></li>
-<li><p>5V</p></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><img src="fig/20211003_111316.jpg" width="200" /></td>
-<td style="text-align: left;"><ul>
-<li><p>아두이노 우노</p></li>
-<li><p>MCU: ATmega328P</p></li>
-<li><p>동작전압: 보드 동작(5 V), 내부(3.3 V)</p></li>
-<li><p>메모리; Flash(32KB), SRAM(2KB), EEPROM(1KB)</p></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><img src="fig/20211003_111226.jpg" width="200" /></td>
-<td style="text-align: left;"><ul>
-<li><p>품명: TW102050</p></li>
-<li><p>정격: 1,000 mAh, 3.7 V, 3.7 W/h</p></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><img src="fig/20211003_111220.jpg" width="200" /></td>
-<td style="text-align: left;"><ul>
-<li><p>팬</p></li>
-<li><p>DC-5V</p></li>
-</ul></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><img src="fig/20211003_111215.jpg" width="200" /></td>
-<td style="text-align: left;"><ul>
-<li><p>디스플레이</p></li>
-<li><p>4-Bit LED Digital Tube Module</p></li>
-<li></li>
-</ul></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><img src="fig/20211003_111226.jpg" width="200" /></td>
-<td style="text-align: left;"><ul>
-<li><p>컨트롤러</p></li>
-<li><p>KCD11</p></li>
-<li><p>250V, 3A</p></li>
-</ul></td>
-</tr>
-</tbody>
-</table>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
+<div class="layout-chunk" data-layout="l-body">
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>unsigned char LED_0F[] <span class="ot">=</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>{<span class="sc">/</span><span class="er">/</span> <span class="dv">0</span> <span class="dv">1</span>  <span class="dv">2</span>   <span class="dv">3</span> <span class="dv">4</span> <span class="dv">5</span>  <span class="dv">6</span>   <span class="dv">7</span> <span class="dv">8</span> <span class="dv">9</span>  A   b C    d  E    F    <span class="sc">-</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="dv">0xC0</span>,<span class="dv">0xF9</span>,<span class="dv">0xA4</span>,<span class="dv">0xB0</span>,<span class="dv">0x99</span>,<span class="dv">0x92</span>,<span class="dv">0x82</span>,<span class="dv">0xF8</span>,<span class="dv">0x80</span>,<span class="dv">0x90</span>,<span class="dv">0x8C</span>,<span class="dv">0xBF</span>,<span class="dv">0xC6</span>,<span class="dv">0xA1</span>,<span class="dv">0x86</span>,<span class="dv">0xFF</span>,<span class="dv">0xbf</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>};</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>unsigned char LED[<span class="dv">4</span>]; <span class="sc">/</span><span class="er">/</span>用于LED的4位显示缓存</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>int SCLK <span class="ot">=</span> <span class="dv">2</span>;</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>int RCLK <span class="ot">=</span> <span class="dv">1</span>;</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>int DIO <span class="ot">=</span> <span class="dv">0</span>; <span class="sc">/</span><span class="er">/</span>这里定义了那三个脚</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>void <span class="fu">setup</span> ()</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pinMode</span>(SCLK,OUTPUT);</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pinMode</span>(RCLK,OUTPUT);</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pinMode</span>(DIO,OUTPUT); <span class="sc">/</span><span class="er">/</span>让三个脚都是输出状态</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>void <span class="fu">loop</span>()</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>  LED[<span class="dv">0</span>]<span class="ot">=</span><span class="dv">1</span>;</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>  LED[<span class="dv">1</span>]<span class="ot">=</span><span class="dv">2</span>;</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>  LED[<span class="dv">2</span>]<span class="ot">=</span><span class="dv">3</span>;</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>  LED[<span class="dv">3</span>]<span class="ot">=</span><span class="dv">4</span>;</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>  <span class="cf">while</span>(<span class="dv">1</span>)</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">LED4_Display</span> ();</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  } </span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+</div>
+</section>
+</div>
+</div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
 </div>

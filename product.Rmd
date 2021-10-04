@@ -1,0 +1,12 @@
+---
+title: "제품"
+description: |
+  가빈을 소개합니다.
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+

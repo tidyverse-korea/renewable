@@ -1,27 +1,38 @@
 ---
 title: "에너지 캠프"
 description: |
-  한국과학창의재단 후원으로 전국에서 메이커 분들이 모여 2박3일간 탄소중립 신재생에너지 메이커 활동을 태백에서 실천했습니다. 
+  탄소중립 신재생 에너지 캠프 **솔라노마드** 팀 메이커들이 모여 함께 `가빈`을 제품명으로 친환경 태양열 AI 교육 제품을 제작하였습니다.
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# 포스터
 
-![](fig/poster.jpg)
+# 팀 & 메이커
 
-# 프로그램
+- 솔라 노마드(Solar Nomad)
+    - 김희태 (3D 기구물)
+    - 박현석 (하드웨어)
+    - 서경준 (아두이노 개발)
+    - 이광춘 (노마드)
 
-```{r program, eval = TRUE}
-library(tidyverse)
-library(slickR)
+![](fig/team.png){width="450"}
 
-program_image <- fs::dir_ls("fig/nolman/")
+# 제품명
 
-program_tbl <- tibble(filename = program_image)
+**가빈** (반갑고 귀한 손님)
 
-slickR::slickR(obj = program_tbl$filename)
-```
+# 개발 방향
+
+최신 트렌드인 AI까지 반영하여 초소형 신재생 에너지 저장 및 활용까지 전체 과정을 짧은 시간 안에 개발하고 경험하고 논의할 수 있는 교육교재 개발
+
+**가빈**을 개발하게 되면 이를 확장하여 풍력, 수력, 지열 발전 등으로 에너지 원을 확장할 수 있고, 신재생 에너지 발전량에 따라 배터리를 교체 혹은 용량확장을 통해 넉넉히 전기 에너지를 저장할 수 있을 뿐만 아니라 제어도 사람이 개입된 방식을 넘어 Rule 기반 혹은 기계학습 알고리즘을 넘어 기계가 자동 제어를 할 수 있도록 가장 기본적인 기능을 구현함.
+
+# 차기 가빈 제품
+
+가빈 기본 뼈대를 바탕으로 다양한 방향을호 기능을 확장할 수 있다.
+
+![](fig/extention.png)
+
 

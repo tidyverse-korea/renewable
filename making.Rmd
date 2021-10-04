@@ -1,0 +1,115 @@
+---
+title: "메이킹"
+description: |
+  설계도를 기반으로 3D 프린터 제작과 코딩을 통해 가빈을 제작해 나간다.
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+# https://github.com/rstudio/distill/issues/11
+xaringanExtra::use_panelset()
+
+xaringanExtra::style_panelset_tabs(
+  foreground = "#F7F7F7",
+  background = "#1E61B0",
+  active_foreground = "#F7F7F7", # R logo 회색
+  active_background = "#1E61B0", # R logo 파란색
+  active_border_color = "#1E61B0",
+  hover_foreground = "#F7F7F7",
+  hover_background = "#1E6190",
+  hover_border_color = "#1E6190",
+  inactive_opacity = 0.5
+)
+```
+
+# 기구물 3D 프린터
+
+# 태양열 발전
+
+::: {.l-page}
+::: {.panelset}
+::: {.panel}
+## ::: 이미지 ::: {.panel-name}
+
+![](fig/production/solar.jpeg){width="437"}
+:::
+
+::: {.panel}
+## ::: 코드 ::: {.panel-name}
+
+```{r solar-code, eval = FALSE, echo = TRUE}
+#include <SoftwareSerial.h>
+
+int solar_input = A0; // 태양광 패널 인풋
+
+void setup() {
+    Serial.begin(9600);
+    pinMode(solar_input, INPUT); // 태양광 전류 인풋
+}
+
+void loop() {
+  
+  int solar_value;
+  solar_value = analogRead(solar_input);
+  
+  delay(1000);
+  Serial.print(" salor panel = ");
+  Serial.print(solar_value);
+  Serial.print("\n");
+  
+}
+
+```
+:::
+:::
+:::
+
+# 디지털 디스플레이
+
+::: {.l-page}
+::: {.panelset}
+::: {.panel}
+## ::: 이미지 ::: {.panel-name}
+
+![](fig/production/display.jpeg){width="437"}
+:::
+
+::: {.panel}
+## ::: 코드 ::: {.panel-name}
+
+-   참고: [4 Bits Digital Tube LED Display Module library](https://forum.arduino.cc/t/4-bits-digital-tube-led-display-module-library/375305)
+
+```{r display-code, eval = FALSE, echo = TRUE}
+unsigned char LED_0F[] = 
+{// 0 1  2   3 4 5  6   7 8 9  A   b C    d  E    F    -
+  0xC0,0xF9,0xA4,0xB0,0x99,0x92,0x82,0xF8,0x80,0x90,0x8C,0xBF,0xC6,0xA1,0x86,0xFF,0xbf
+};
+unsigned char LED[4]; //用于LED的4位显示缓存
+int SCLK = 2;
+int RCLK = 1;
+int DIO = 0; //这里定义了那三个脚
+void setup ()
+{
+  pinMode(SCLK,OUTPUT);
+  pinMode(RCLK,OUTPUT);
+  pinMode(DIO,OUTPUT); //让三个脚都是输出状态
+}
+void loop()
+{
+  LED[0]=1;
+  LED[1]=2;
+  LED[2]=3;
+  LED[3]=4;
+  while(1)
+  {
+    LED4_Display ();
+  } 
+
+}
+```
+:::
+:::
+:::

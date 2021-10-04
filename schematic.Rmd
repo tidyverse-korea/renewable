@@ -1,7 +1,7 @@
 ---
-title: "회로도"
+title: "설계도"
 description: |
-  자재를 연결하는 회로 설계도
+  가빈을 구성하는 하드웨어 기구물과 신경 제어 설계
 editor_options: 
   chunk_output_type: console
 ---
@@ -10,7 +10,7 @@ editor_options:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-# 3D 프린터 `stl`
+# 기구물 3D 프린터
 
 3D 프린터 `stl` 파일을 통해 구현될 제품을 살펴보자.
 
@@ -23,13 +23,37 @@ knitr::knit_hooks$set(webgl = hook_webgl)
 top_stl <- readSTL("data/top.stl", col = "blue")
 ```
 
-- [다운로드](data/top.stl)
+- [다운로드(`.stl`)](data/top.stl)
+- [다운로드(`.3dm`)](data/top.3dm)
+
+## 회전 부분
+
+```{r stl-3d-circle, webgl=TRUE}
+circle_stl <- readSTL("data/circle.stl", col = "blue")
+```
+
+- [다운로드(`.stl`)](data/circle.stl)
+- [다운로드(`.3dm`)](data/circle.3dm)
 
 ## 본체 부분
 
 ```{r stl-3d-bottom, webgl=TRUE}
-top_stl <- readSTL("data/main.stl", col = "blue")
+case_stl <- readSTL("data/case.stl", col = "blue")
 ```
 
-- [다운로드](data/main.stl)
+- [다운로드(`.stl`)](data/case.stl)
+- [다운로드(`.3dm`)](data/case.3dm)
+
+# 제어 회로 [^fritzing]
+
+[^fritzing]: [fritzing](https://fritzing.org/download/) 다운로드해서 설치함. 
+
+## 디스플레이
+
+![](fig/design/4_digit_7_segment_display.jpg)
+
+## 태양열 발전
+
+![](fig/design/solar-charger.png)
+
 
