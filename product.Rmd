@@ -10,3 +10,39 @@ editor_options:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
+# 제품
+
+```{r product, eval = TRUE}
+library(tidyverse)
+library(slickR)
+
+product_image <- fs::dir_ls("data/still_image/")
+
+product_tbl <- tibble(filename = product_image)
+
+slickR::slickR(obj = product_tbl$filename)
+```
+
+<br>
+<br>
+<br> 
+<br>
+<br> 
+
+
+# 발전 에너지 사용
+
+
+<video width="320" height="180" controls>
+  <source src="data/production/fan.mp4" type="video/mp4">
+</video>
+
+
+# 태양열 발전
+
+
+<video width="320" height="180" controls>
+  <source src="data/production/solar.mp4" type="video/mp4">
+</video>
+
+
